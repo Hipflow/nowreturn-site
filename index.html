@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0a0a">
 <title>Return — L'essentiel pour méditer</title>
 <meta name="description" content="Return est un outil de méditation guidée. Trois mouvements, neuf thèmes, trois exercices de respiration. Cinq minutes par jour suffisent.">
 
@@ -20,24 +19,15 @@
 <style>
   :root {
     --bg: #0a0a0a;
-    --text: #e8eaf0;
-    --muted: #a0a8c0;
-    --citation: #c8cde0;
+    --text: #ffffff;
+    --muted: #e8eaf0;
+    --citation: #ffffff;
     --accent: #818cf8;
-    --border: rgba(160, 168, 192, 0.08);
+    --border: rgba(255, 255, 255, 0.08);
     --surface: rgba(255, 255, 255, 0.03);
   }
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #fafafa;
-      --text: #1a1f3a;
-      --muted: #3d4663;
-      --citation: #252a4a;
-      --accent: #6366f1;
-      --border: rgba(61, 70, 99, 0.1);
-      --surface: rgba(255, 255, 255, 0.6);
-    }
-  }
+  /* Force dark mode partout — pas de switch light */
+  html { color-scheme: dark; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
     background: var(--bg);
