@@ -3,99 +3,182 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0a0a0a">
-<title>Return — Revenir à soi, en silence.</title>
-<meta name="description" content="Return est une application de méditation guidée minimaliste. Cinq minutes, trois mouvements, trois outils de respiration. Pas de coach, pas de streak, pas de notifications agressives.">
-<meta property="og:title" content="Return — Revenir à soi, en silence.">
-<meta property="og:description" content="Une app de méditation pour ceux qui n'aiment pas les apps de méditation.">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+<title>Return — L'essentiel pour méditer</title>
+<meta name="description" content="Return est un outil de méditation guidée. Trois mouvements, neuf thèmes, trois exercices de respiration. Cinq minutes par jour suffisent.">
+
+<meta property="og:title" content="Return — L'essentiel pour méditer">
+<meta property="og:description" content="Un outil de méditation guidée minimaliste. Trois mouvements, neuf thèmes, trois exercices de respiration.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://nowreturn.app">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --bg: #0a0a0a;
-    --text: #f5f5f5;
+    --text: #e8eaf0;
     --muted: #a0a8c0;
+    --citation: #c8cde0;
     --accent: #818cf8;
+    --border: rgba(160, 168, 192, 0.08);
+    --surface: rgba(255, 255, 255, 0.03);
   }
   @media (prefers-color-scheme: light) {
     :root {
       --bg: #fafafa;
       --text: #1a1f3a;
       --muted: #3d4663;
+      --citation: #252a4a;
       --accent: #6366f1;
+      --border: rgba(61, 70, 99, 0.1);
+      --surface: rgba(255, 255, 255, 0.6);
     }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
     background: var(--bg);
     color: var(--text);
-    font-family: ui-serif, "Iowan Old Style", "Apple Garamond", Georgia, serif;
+    font-family: 'Instrument Serif', ui-serif, Georgia, serif;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
   }
-  body { min-height: 100vh; display: flex; flex-direction: column; }
+  body {
+    display: flex;
+    flex-direction: column;
+    background-image:
+      radial-gradient(circle at 50% 30%, rgba(129, 140, 248, 0.06), transparent 50%),
+      radial-gradient(circle at 50% 80%, rgba(100, 108, 200, 0.04), transparent 60%);
+  }
   main {
     flex: 1;
-    max-width: 540px;
+    max-width: 560px;
     margin: 0 auto;
-    padding: 80px 28px 60px;
+    padding: 80px 32px 60px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .orb {
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 30%, var(--accent), transparent 60%),
-                radial-gradient(circle at 65% 70%, rgba(129,140,248,0.4), transparent 50%);
-    margin: 0 auto 48px;
-    opacity: 0.9;
+  .logo {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 56px;
+    color: var(--text);
+    opacity: 0.92;
   }
   h1 {
-    font-size: 28px;
-    font-weight: 400;
+    font-family: 'Instrument Serif', serif;
     font-style: italic;
-    letter-spacing: -0.4px;
-    margin-bottom: 24px;
-    line-height: 1.3;
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    color: var(--citation);
+    margin-bottom: 28px;
   }
-  p { color: var(--muted); margin-bottom: 20px; font-size: 16px; }
-  p.lead { color: var(--text); font-size: 17px; margin-bottom: 36px; }
-  .nav {
-    margin-top: 56px;
-    padding-top: 32px;
-    border-top: 1px solid rgba(160, 168, 192, 0.15);
+  .lead {
+    font-family: 'Instrument Serif', serif;
+    color: var(--text);
+    font-size: 19px;
+    line-height: 1.55;
+    margin-bottom: 24px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .lead.muted {
+    color: var(--muted);
+    font-size: 17px;
+  }
+  .soon {
+    margin-top: 48px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+  nav {
+    margin-top: 80px;
+    padding-top: 36px;
+    border-top: 1px solid var(--border);
     display: flex;
     justify-content: center;
-    gap: 32px;
-    font-family: ui-monospace, "JetBrains Mono", "SF Mono", monospace;
+    gap: 36px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
+    font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
   }
-  .nav a { color: var(--muted); text-decoration: none; transition: color 0.3s; }
-  .nav a:hover { color: var(--text); }
+  nav a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.25s ease, opacity 0.25s ease;
+    opacity: 0.85;
+  }
+  nav a:hover {
+    color: var(--text);
+    opacity: 1;
+  }
   footer {
-    padding: 24px;
+    padding: 32px 24px;
     text-align: center;
-    font-family: ui-monospace, monospace;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
     color: var(--muted);
-    letter-spacing: 0.8px;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
-    opacity: 0.6;
+    opacity: 0.5;
   }
 </style>
 </head>
 <body>
 <main>
-  <div class="orb"></div>
+  <!-- Logo Return — mandala 17 dots, géométrie identique à l'app -->
+  <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Return">
+    <!-- Central dot (CENTER_R = 0.102 → r=10.2) -->
+    <circle cx="50" cy="50" r="10.2" fill="currentColor"/>
+    <!-- Inner ring (INNER_DIST = 22.8, INNER_R = 5.4) -->
+    <circle cx="72.8" cy="50" r="5.4" fill="currentColor"/>
+    <circle cx="66.12" cy="66.12" r="5.4" fill="currentColor"/>
+    <circle cx="50" cy="72.8" r="5.4" fill="currentColor"/>
+    <circle cx="33.88" cy="66.12" r="5.4" fill="currentColor"/>
+    <circle cx="27.2" cy="50" r="5.4" fill="currentColor"/>
+    <circle cx="33.88" cy="33.88" r="5.4" fill="currentColor"/>
+    <circle cx="50" cy="27.2" r="5.4" fill="currentColor"/>
+    <circle cx="66.12" cy="33.88" r="5.4" fill="currentColor"/>
+    <!-- Outer ring (OUTER_DIST = 42.8, OUTER_R = 7.3) -->
+    <circle cx="92.8" cy="50" r="7.3" fill="currentColor"/>
+    <circle cx="80.27" cy="80.27" r="7.3" fill="currentColor"/>
+    <circle cx="50" cy="92.8" r="7.3" fill="currentColor"/>
+    <circle cx="19.73" cy="80.27" r="7.3" fill="currentColor"/>
+    <circle cx="7.2" cy="50" r="7.3" fill="currentColor"/>
+    <circle cx="19.73" cy="19.73" r="7.3" fill="currentColor"/>
+    <circle cx="50" cy="7.2" r="7.3" fill="currentColor"/>
+    <circle cx="80.27" cy="19.73" r="7.3" fill="currentColor"/>
+  </svg>
+
   <h1>Revenir à soi,<br>en silence.</h1>
-  <p class="lead">Return est une application de méditation guidée minimaliste.</p>
-  <p>Cinq minutes. Trois mouvements. Trois outils de respiration. Pas de coach. Pas de streak. Pas de notifications agressives.</p>
-  <p>Bientôt sur l'App Store.</p>
-  <nav class="nav">
-    <a href="/privacy">Privacy</a>
-    <a href="/support">Support</a>
-    <a href="mailto:hello@nowreturn.app">Contact</a>
+
+  <p class="lead">Return est un outil de méditation guidée, pensé pour devenir une pratique quotidienne.</p>
+
+  <p class="lead muted">Trois mouvements, neuf thèmes, trois exercices de respiration. Un timer, un suivi. Cinq minutes par jour suffisent.</p>
+
+  <p class="soon">Bientôt sur l'App Store</p>
+
+  <nav>
+    <a href="/nowreturn-site/privacy">Privacy</a>
+    <a href="/nowreturn-site/support">Support</a>
+    <a href="mailto:sensvisuel@gmail.com">Contact</a>
   </nav>
 </main>
 <footer>© 2026 Hipflow</footer>

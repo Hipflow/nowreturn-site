@@ -3,21 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
 <title>Privacy Policy — Return</title>
-<meta name="description" content="Politique de confidentialité de Return — l'application de méditation guidée.">
+<meta name="description" content="Politique de confidentialité de Return — application de méditation guidée.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
     --bg: #0a0a0a;
-    --text: #f5f5f5;
+    --text: #e8eaf0;
     --muted: #a0a8c0;
+    --citation: #c8cde0;
     --accent: #818cf8;
-    --border: rgba(160, 168, 192, 0.15);
+    --border: rgba(160, 168, 192, 0.1);
   }
   @media (prefers-color-scheme: light) {
     :root {
       --bg: #fafafa;
       --text: #1a1f3a;
       --muted: #3d4663;
+      --citation: #252a4a;
       --accent: #6366f1;
       --border: rgba(61, 70, 99, 0.12);
     }
@@ -26,82 +35,136 @@
   html, body {
     background: var(--bg);
     color: var(--text);
-    font-family: ui-serif, "Iowan Old Style", "Apple Garamond", Georgia, serif;
+    font-family: 'Instrument Serif', ui-serif, Georgia, serif;
     font-size: 17px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
-  main {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 60px 28px 80px;
-  }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 32px 80px; }
+
   .crumb {
-    font-family: ui-monospace, "JetBrains Mono", monospace;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--muted);
-    margin-bottom: 40px;
-  }
-  .crumb a { color: var(--muted); text-decoration: none; }
-  .crumb a:hover { color: var(--text); }
-  h1 {
-    font-size: 32px;
-    font-weight: 400;
-    margin-bottom: 8px;
-    letter-spacing: -0.4px;
-  }
-  .meta {
-    font-family: ui-monospace, monospace;
-    font-size: 12px;
+    letter-spacing: 1.4px;
     color: var(--muted);
     margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .crumb a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+    opacity: 0.85;
+  }
+  .crumb a:hover { color: var(--text); opacity: 1; }
+
+  .logo-mini {
+    width: 18px;
+    height: 18px;
+    color: var(--muted);
+    opacity: 0.7;
+  }
+
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+    color: var(--citation);
+  }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+    margin-bottom: 56px;
     text-transform: uppercase;
-    letter-spacing: 0.8px;
+    letter-spacing: 1.2px;
+    opacity: 0.8;
   }
   h2 {
-    font-size: 22px;
-    font-weight: 400;
-    margin: 48px 0 16px;
+    font-family: 'Instrument Serif', serif;
     font-style: italic;
-    letter-spacing: -0.2px;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 56px 0 18px;
+    letter-spacing: -0.3px;
+    color: var(--citation);
   }
   h3 {
+    font-family: 'Instrument Serif', serif;
     font-size: 17px;
-    font-weight: 500;
-    margin: 24px 0 8px;
+    font-weight: 400;
+    font-style: italic;
+    margin: 28px 0 10px;
     color: var(--text);
+    opacity: 0.9;
   }
   p { margin-bottom: 18px; color: var(--muted); }
-  p strong, li strong { color: var(--text); font-weight: 500; }
-  ul { margin: 8px 0 18px 20px; }
+  p strong, li strong { color: var(--text); font-weight: 400; }
+  ul { margin: 8px 0 22px 22px; }
   li { margin-bottom: 8px; color: var(--muted); }
-  a { color: var(--accent); }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  a:hover { border-bottom-color: var(--accent); }
   hr {
     border: 0;
     border-top: 1px solid var(--border);
-    margin: 64px 0;
+    margin: 72px 0;
   }
   .lang-toggle {
-    margin-top: 64px;
-    padding-top: 32px;
+    margin-top: 72px;
+    padding-top: 36px;
     border-top: 1px solid var(--border);
     text-align: center;
-    font-family: ui-monospace, monospace;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
+    letter-spacing: 1.4px;
   }
+  .lang-toggle a {
+    color: var(--muted);
+    margin: 0 14px;
+    border: none;
+    transition: color 0.2s;
+  }
+  .lang-toggle a:hover { color: var(--text); }
 </style>
 </head>
 <body>
 <main>
-  <div class="crumb"><a href="/">← Return</a></div>
+  <div class="crumb">
+    <svg class="logo-mini" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="10.2" fill="currentColor"/>
+      <circle cx="72.8" cy="50" r="5.4" fill="currentColor"/>
+      <circle cx="66.12" cy="66.12" r="5.4" fill="currentColor"/>
+      <circle cx="50" cy="72.8" r="5.4" fill="currentColor"/>
+      <circle cx="33.88" cy="66.12" r="5.4" fill="currentColor"/>
+      <circle cx="27.2" cy="50" r="5.4" fill="currentColor"/>
+      <circle cx="33.88" cy="33.88" r="5.4" fill="currentColor"/>
+      <circle cx="50" cy="27.2" r="5.4" fill="currentColor"/>
+      <circle cx="66.12" cy="33.88" r="5.4" fill="currentColor"/>
+      <circle cx="92.8" cy="50" r="7.3" fill="currentColor"/>
+      <circle cx="80.27" cy="80.27" r="7.3" fill="currentColor"/>
+      <circle cx="50" cy="92.8" r="7.3" fill="currentColor"/>
+      <circle cx="19.73" cy="80.27" r="7.3" fill="currentColor"/>
+      <circle cx="7.2" cy="50" r="7.3" fill="currentColor"/>
+      <circle cx="19.73" cy="19.73" r="7.3" fill="currentColor"/>
+      <circle cx="50" cy="7.2" r="7.3" fill="currentColor"/>
+      <circle cx="80.27" cy="19.73" r="7.3" fill="currentColor"/>
+    </svg>
+    <a href="/nowreturn-site/">Return</a>
+  </div>
 
-  <!-- =============================================== -->
-  <!--  FR                                              -->
-  <!-- =============================================== -->
+  <!-- ============== FR ============== -->
   <section id="fr">
     <h1>Politique de Confidentialité</h1>
     <div class="meta">Dernière mise à jour : 30 mai 2026</div>
@@ -137,11 +200,11 @@
     <h2>Droits (RGPD)</h2>
     <p>Tu peux à tout moment :</p>
     <ul>
-      <li><strong>Consulter</strong> tes données : Profil → "Exporter mes données"</li>
-      <li><strong>Supprimer</strong> tes données : Profil → "Réinitialiser" (efface tout localement et sur nos serveurs)</li>
+      <li><strong>Consulter</strong> tes données : Profil → « Exporter mes données »</li>
+      <li><strong>Supprimer</strong> tes données : Profil → « Réinitialiser » (efface tout localement et sur nos serveurs)</li>
       <li><strong>Désactiver la sync</strong> : déconnecte-toi, tes données restent uniquement sur ton appareil</li>
     </ul>
-    <p>Pour toute demande : <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+    <p>Pour toute demande : <a href="mailto:sensvisuel@gmail.com">sensvisuel@gmail.com</a></p>
 
     <h2>Stockage et durée</h2>
     <ul>
@@ -155,14 +218,12 @@
 
     <h2>Contact</h2>
     <p><strong>Hipflow / Mathieu Martin</strong><br>
-    Email : <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+    Email : <a href="mailto:sensvisuel@gmail.com">sensvisuel@gmail.com</a></p>
   </section>
 
   <hr>
 
-  <!-- =============================================== -->
-  <!--  EN                                              -->
-  <!-- =============================================== -->
+  <!-- ============== EN ============== -->
   <section id="en">
     <h1>Privacy Policy</h1>
     <div class="meta">Last updated: May 30, 2026</div>
@@ -201,7 +262,7 @@
       <li><strong>Delete</strong> your data: Profile → "Reset" (wipes everything locally and on our servers)</li>
       <li><strong>Disable sync</strong>: sign out — your data stays on your device only</li>
     </ul>
-    <p>For any request: <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+    <p>For any request: <a href="mailto:sensvisuel@gmail.com">sensvisuel@gmail.com</a></p>
 
     <h2>Storage and retention</h2>
     <ul>
@@ -215,12 +276,12 @@
 
     <h2>Contact</h2>
     <p><strong>Hipflow / Mathieu Martin</strong><br>
-    Email: <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+    Email: <a href="mailto:sensvisuel@gmail.com">sensvisuel@gmail.com</a></p>
   </section>
 
   <div class="lang-toggle">
-    <a href="#fr" style="color: var(--accent); text-decoration: none; margin-right: 16px;">Français</a>
-    <a href="#en" style="color: var(--accent); text-decoration: none;">English</a>
+    <a href="#fr">Français</a>
+    <a href="#en">English</a>
   </div>
 </main>
 </body>

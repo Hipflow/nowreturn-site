@@ -3,78 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
 <title>Support — Return</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
   :root {
-    --bg: #0a0a0a; --text: #f5f5f5; --muted: #a0a8c0; --accent: #818cf8;
-    --border: rgba(160, 168, 192, 0.15);
+    --bg: #0a0a0a;
+    --text: #e8eaf0;
+    --muted: #a0a8c0;
+    --citation: #c8cde0;
+    --accent: #818cf8;
+    --border: rgba(160, 168, 192, 0.1);
+    --surface: rgba(255, 255, 255, 0.03);
   }
   @media (prefers-color-scheme: light) {
-    :root { --bg: #fafafa; --text: #1a1f3a; --muted: #3d4663; --accent: #6366f1; --border: rgba(61, 70, 99, 0.12); }
+    :root {
+      --bg: #fafafa;
+      --text: #1a1f3a;
+      --muted: #3d4663;
+      --citation: #252a4a;
+      --accent: #6366f1;
+      --border: rgba(61, 70, 99, 0.12);
+      --surface: rgba(255, 255, 255, 0.5);
+    }
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body {
-    background: var(--bg); color: var(--text);
-    font-family: ui-serif, "Iowan Old Style", Georgia, serif;
-    font-size: 17px; line-height: 1.65;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Instrument Serif', ui-serif, Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
-  main { max-width: 620px; margin: 0 auto; padding: 60px 28px 80px; }
-  .crumb { font-family: ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 40px; }
-  .crumb a { color: var(--muted); text-decoration: none; }
-  h1 { font-size: 32px; font-weight: 400; margin-bottom: 32px; letter-spacing: -0.4px; }
-  h2 { font-size: 20px; font-weight: 400; font-style: italic; margin: 40px 0 12px; }
-  p { color: var(--muted); margin-bottom: 16px; }
-  p strong { color: var(--text); }
-  a { color: var(--accent); }
+  main { max-width: 620px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  .crumb {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .crumb a {
+    color: var(--muted);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: color 0.2s, opacity 0.2s;
+  }
+  .crumb a:hover { color: var(--text); opacity: 1; }
+  .logo-mini { width: 18px; height: 18px; color: var(--muted); opacity: 0.7; }
+
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    margin-bottom: 40px;
+    color: var(--citation);
+  }
+  h2 {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 56px 0 14px;
+    color: var(--citation);
+    letter-spacing: -0.2px;
+  }
+  p { color: var(--muted); margin-bottom: 18px; }
+  p strong { color: var(--text); font-weight: 400; font-style: italic; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  a:hover { border-bottom-color: var(--accent); }
+
   .contact-box {
+    background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 16px;
+    padding: 36px 28px;
     text-align: center;
-    margin: 40px 0;
+    margin: 32px 0 48px;
   }
+  .contact-box p { margin-bottom: 20px; }
   .contact-box a {
     display: inline-block;
-    font-family: ui-monospace, monospace;
-    font-size: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.5px;
     text-decoration: none;
-    margin-top: 12px;
-    padding: 12px 24px;
+    padding: 12px 28px;
     border: 1px solid var(--accent);
-    border-radius: 8px;
-    transition: all 0.2s;
+    border-radius: 999px;
+    color: var(--accent);
+    transition: all 0.2s ease;
   }
-  .contact-box a:hover { background: var(--accent); color: var(--bg); }
+  .contact-box a:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-bottom: 1px solid var(--accent);
+  }
 </style>
 </head>
 <body>
 <main>
-  <div class="crumb"><a href="/">← Return</a></div>
+  <div class="crumb">
+    <svg class="logo-mini" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="10.2" fill="currentColor"/>
+      <circle cx="72.8" cy="50" r="5.4" fill="currentColor"/>
+      <circle cx="66.12" cy="66.12" r="5.4" fill="currentColor"/>
+      <circle cx="50" cy="72.8" r="5.4" fill="currentColor"/>
+      <circle cx="33.88" cy="66.12" r="5.4" fill="currentColor"/>
+      <circle cx="27.2" cy="50" r="5.4" fill="currentColor"/>
+      <circle cx="33.88" cy="33.88" r="5.4" fill="currentColor"/>
+      <circle cx="50" cy="27.2" r="5.4" fill="currentColor"/>
+      <circle cx="66.12" cy="33.88" r="5.4" fill="currentColor"/>
+      <circle cx="92.8" cy="50" r="7.3" fill="currentColor"/>
+      <circle cx="80.27" cy="80.27" r="7.3" fill="currentColor"/>
+      <circle cx="50" cy="92.8" r="7.3" fill="currentColor"/>
+      <circle cx="19.73" cy="80.27" r="7.3" fill="currentColor"/>
+      <circle cx="7.2" cy="50" r="7.3" fill="currentColor"/>
+      <circle cx="19.73" cy="19.73" r="7.3" fill="currentColor"/>
+      <circle cx="50" cy="7.2" r="7.3" fill="currentColor"/>
+      <circle cx="80.27" cy="19.73" r="7.3" fill="currentColor"/>
+    </svg>
+    <a href="/nowreturn-site/">Return</a>
+  </div>
+
   <h1>Support</h1>
 
-  <p>Tu as une question, un bug à signaler, une suggestion ?</p>
+  <p>Tu as une question, un bug à signaler, ou une suggestion ?</p>
 
   <div class="contact-box">
-    <p>Écris-moi directement.</p>
-    <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a>
+    <p>Écris-moi directement, je réponds à chaque message.</p>
+    <a href="mailto:sensvisuel@gmail.com">sensvisuel@gmail.com</a>
   </div>
 
   <h2>Questions fréquentes</h2>
 
-  <p><strong>Mes données sont-elles synchronisées ?</strong><br>
-  Uniquement si tu crées un compte. Sinon tout reste sur ton appareil.</p>
+  <p><strong>Combien y a-t-il de contenu gratuit ?</strong><br>
+  Les sessions de cinq minutes sont gratuites dans les neuf thèmes — soit neuf méditations guidées différentes. Les trois outils de respiration sont également gratuits, sans limite d'utilisation. C'est suffisant pour une pratique quotidienne régulière.</p>
 
-  <p><strong>Pourquoi certaines sessions affichent "BIENTÔT" ?</strong><br>
-  Les méditations de 10 et 20 minutes ainsi que les Paths arrivent en premium dans une prochaine version. Les 5 minutes restent gratuites pour toujours.</p>
+  <p><strong>Mes données sont-elles synchronisées ?</strong><br>
+  Uniquement si tu crées un compte. Sinon, tout reste sur ton appareil.</p>
+
+  <p><strong>Pourquoi certaines sessions affichent « BIENTÔT » ?</strong><br>
+  Les méditations de 10 et 20 minutes ainsi que les Paths (parcours guidés sur plusieurs jours) arrivent en premium dans une prochaine version. Les 5 minutes restent gratuites pour toujours.</p>
 
   <p><strong>Comment activer le rappel quotidien ?</strong><br>
-  Profil → Notifications → choisis l'heure. La notification est planifiée localement sur ton iPhone.</p>
+  Profil → Notifications → choisis l'heure. La notification est planifiée localement sur ton iPhone, aucun serveur push n'est utilisé.</p>
 
   <p><strong>Y aura-t-il une version Android ?</strong><br>
-  Oui, prévue pour v1.2.</p>
+  Oui, prévue après quelques mois de retours sur la version iOS. Probablement v1.2.</p>
 
   <p><strong>Comment supprimer mes données ?</strong><br>
-  Profil → "Réinitialiser". Tout est effacé localement et sur nos serveurs.</p>
+  Profil → « Réinitialiser ». Tout est effacé localement et sur les serveurs si tu as un compte.</p>
+
+  <p><strong>L'app est-elle disponible en anglais ou espagnol ?</strong><br>
+  Pas encore — v1.0 est en français uniquement. Les versions anglaise et espagnole sont prévues pour v1.1, dans quelques semaines après le lancement.</p>
 </main>
 </body>
 </html>
