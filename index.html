@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0a0a">
+<title>Return — Revenir à soi, en silence.</title>
+<meta name="description" content="Return est une application de méditation guidée minimaliste. Cinq minutes, trois mouvements, trois outils de respiration. Pas de coach, pas de streak, pas de notifications agressives.">
+<meta property="og:title" content="Return — Revenir à soi, en silence.">
+<meta property="og:description" content="Une app de méditation pour ceux qui n'aiment pas les apps de méditation.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --text: #f5f5f5;
+    --muted: #a0a8c0;
+    --accent: #818cf8;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafafa;
+      --text: #1a1f3a;
+      --muted: #3d4663;
+      --accent: #6366f1;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-serif, "Iowan Old Style", "Apple Garamond", Georgia, serif;
+    font-size: 18px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { min-height: 100vh; display: flex; flex-direction: column; }
+  main {
+    flex: 1;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 80px 28px 60px;
+    text-align: center;
+  }
+  .orb {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, var(--accent), transparent 60%),
+                radial-gradient(circle at 65% 70%, rgba(129,140,248,0.4), transparent 50%);
+    margin: 0 auto 48px;
+    opacity: 0.9;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -0.4px;
+    margin-bottom: 24px;
+    line-height: 1.3;
+  }
+  p { color: var(--muted); margin-bottom: 20px; font-size: 16px; }
+  p.lead { color: var(--text); font-size: 17px; margin-bottom: 36px; }
+  .nav {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(160, 168, 192, 0.15);
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    font-family: ui-monospace, "JetBrains Mono", "SF Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+  .nav a { color: var(--muted); text-decoration: none; transition: color 0.3s; }
+  .nav a:hover { color: var(--text); }
+  footer {
+    padding: 24px;
+    text-align: center;
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    color: var(--muted);
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="orb"></div>
+  <h1>Revenir à soi,<br>en silence.</h1>
+  <p class="lead">Return est une application de méditation guidée minimaliste.</p>
+  <p>Cinq minutes. Trois mouvements. Trois outils de respiration. Pas de coach. Pas de streak. Pas de notifications agressives.</p>
+  <p>Bientôt sur l'App Store.</p>
+  <nav class="nav">
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+    <a href="mailto:hello@nowreturn.app">Contact</a>
+  </nav>
+</main>
+<footer>© 2026 Hipflow</footer>
+</body>
+</html>

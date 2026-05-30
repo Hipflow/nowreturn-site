@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Return</title>
+<meta name="description" content="Politique de confidentialité de Return — l'application de méditation guidée.">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --text: #f5f5f5;
+    --muted: #a0a8c0;
+    --accent: #818cf8;
+    --border: rgba(160, 168, 192, 0.15);
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fafafa;
+      --text: #1a1f3a;
+      --muted: #3d4663;
+      --accent: #6366f1;
+      --border: rgba(61, 70, 99, 0.12);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-serif, "Iowan Old Style", "Apple Garamond", Georgia, serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 28px 80px;
+  }
+  .crumb {
+    font-family: ui-monospace, "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 40px;
+  }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  .crumb a:hover { color: var(--text); }
+  h1 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    letter-spacing: -0.4px;
+  }
+  .meta {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 48px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 48px 0 16px;
+    font-style: italic;
+    letter-spacing: -0.2px;
+  }
+  h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 24px 0 8px;
+    color: var(--text);
+  }
+  p { margin-bottom: 18px; color: var(--muted); }
+  p strong, li strong { color: var(--text); font-weight: 500; }
+  ul { margin: 8px 0 18px 20px; }
+  li { margin-bottom: 8px; color: var(--muted); }
+  a { color: var(--accent); }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 64px 0;
+  }
+  .lang-toggle {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="crumb"><a href="/">← Return</a></div>
+
+  <!-- =============================================== -->
+  <!--  FR                                              -->
+  <!-- =============================================== -->
+  <section id="fr">
+    <h1>Politique de Confidentialité</h1>
+    <div class="meta">Dernière mise à jour : 30 mai 2026</div>
+
+    <p>Return est une application de méditation guidée éditée par <strong>Hipflow</strong> (Mathieu Martin, France). Cette politique explique ce que l'application collecte, pourquoi, et comment tu peux nous contacter.</p>
+
+    <h2>Notre engagement</h2>
+    <p>Return est conçue pour respecter ton intimité. Nous ne vendons aucune donnée, n'utilisons aucun outil publicitaire, n'intégrons aucun tracker tiers.</p>
+
+    <h2>Données collectées</h2>
+
+    <h3>Sans compte (utilisation locale)</h3>
+    <p>Si tu utilises Return sans te connecter, <strong>aucune donnée personnelle n'est envoyée à nos serveurs</strong>. Tes préférences (langue, son, thème) et ton historique de sessions sont stockés uniquement sur ton appareil.</p>
+
+    <h3>Avec compte (synchronisation optionnelle)</h3>
+    <p>Si tu crées un compte (via email), nous collectons :</p>
+    <ul>
+      <li><strong>Adresse email</strong> : pour authentifier ton compte. Stockée chiffrée chez Supabase (UE, RGPD).</li>
+      <li><strong>Historique de méditation</strong> : durée, gate, date de chaque session. Sert uniquement à synchroniser entre tes appareils.</li>
+      <li><strong>Préférences</strong> : langue, durée par défaut, volume, thème.</li>
+    </ul>
+    <p>Nous <strong>ne collectons pas</strong> : nom, prénom, photo, contacts, localisation, microphone, données de santé.</p>
+
+    <h2>Audio et contenu</h2>
+    <p>Les fichiers audio (voix de méditation, gongs) sont téléchargés en streaming depuis Cloudflare R2 (HTTPS uniquement). Aucune donnée d'écoute n'est remontée à Cloudflare au-delà des logs techniques standard (IP, user-agent).</p>
+
+    <h2>Notifications</h2>
+    <p>Si tu actives le rappel quotidien, la notification est <strong>planifiée localement</strong> sur ton appareil. Aucun serveur push n'est utilisé.</p>
+
+    <h2>Crash reports</h2>
+    <p>L'application utilise les outils de crash reporting d'Expo. Les rapports contiennent : version de l'app, type d'appareil, stack trace. <strong>Aucune donnée personnelle.</strong></p>
+
+    <h2>Droits (RGPD)</h2>
+    <p>Tu peux à tout moment :</p>
+    <ul>
+      <li><strong>Consulter</strong> tes données : Profil → "Exporter mes données"</li>
+      <li><strong>Supprimer</strong> tes données : Profil → "Réinitialiser" (efface tout localement et sur nos serveurs)</li>
+      <li><strong>Désactiver la sync</strong> : déconnecte-toi, tes données restent uniquement sur ton appareil</li>
+    </ul>
+    <p>Pour toute demande : <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+
+    <h2>Stockage et durée</h2>
+    <ul>
+      <li>Données locales : tant que l'app est installée</li>
+      <li>Données serveur : tant que ton compte existe, supprimées sous 30 jours après demande</li>
+      <li>Logs techniques : 90 jours</li>
+    </ul>
+
+    <h2>Modifications</h2>
+    <p>Toute modification importante de cette politique sera annoncée dans l'app via une notification au prochain lancement.</p>
+
+    <h2>Contact</h2>
+    <p><strong>Hipflow / Mathieu Martin</strong><br>
+    Email : <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+  </section>
+
+  <hr>
+
+  <!-- =============================================== -->
+  <!--  EN                                              -->
+  <!-- =============================================== -->
+  <section id="en">
+    <h1>Privacy Policy</h1>
+    <div class="meta">Last updated: May 30, 2026</div>
+
+    <p>Return is a guided meditation app published by <strong>Hipflow</strong> (Mathieu Martin, France). This policy explains what the app collects, why, and how to contact us.</p>
+
+    <h2>Our commitment</h2>
+    <p>Return is built to respect your privacy. We don't sell any data, use any advertising tools, or embed any third-party trackers.</p>
+
+    <h2>Data we collect</h2>
+
+    <h3>Without account (local usage)</h3>
+    <p>If you use Return without signing in, <strong>no personal data leaves your device</strong>. Your preferences and meditation history are stored locally only.</p>
+
+    <h3>With account (optional sync)</h3>
+    <p>If you create an account (via email), we collect:</p>
+    <ul>
+      <li><strong>Email address</strong>: to authenticate your account. Stored encrypted on Supabase (EU, GDPR).</li>
+      <li><strong>Meditation history</strong>: duration, gate, date of each session. Only used to sync across your devices.</li>
+      <li><strong>Preferences</strong>: language, default duration, volume, theme.</li>
+    </ul>
+    <p>We <strong>do not collect</strong>: name, photo, contacts, location, microphone, health data.</p>
+
+    <h2>Audio content</h2>
+    <p>Audio files (meditation voices, gongs) are streamed from Cloudflare R2 (HTTPS only). No listening data is sent to Cloudflare beyond standard technical logs (IP, user-agent).</p>
+
+    <h2>Notifications</h2>
+    <p>If you enable the daily reminder, the notification is <strong>scheduled locally</strong> on your device. No push server is used.</p>
+
+    <h2>Crash reports</h2>
+    <p>The app uses Expo's crash reporting tools. Reports contain: app version, device type, stack trace. <strong>No personal data.</strong></p>
+
+    <h2>Your rights (GDPR / CCPA)</h2>
+    <ul>
+      <li><strong>Access</strong> your data: Profile → "Export my data"</li>
+      <li><strong>Delete</strong> your data: Profile → "Reset" (wipes everything locally and on our servers)</li>
+      <li><strong>Disable sync</strong>: sign out — your data stays on your device only</li>
+    </ul>
+    <p>For any request: <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+
+    <h2>Storage and retention</h2>
+    <ul>
+      <li>Local data: as long as the app is installed</li>
+      <li>Server data: as long as your account exists, deleted within 30 days of request</li>
+      <li>Technical logs: 90 days</li>
+    </ul>
+
+    <h2>Changes</h2>
+    <p>Any significant change to this policy will be announced in-app via a notification on next launch.</p>
+
+    <h2>Contact</h2>
+    <p><strong>Hipflow / Mathieu Martin</strong><br>
+    Email: <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a></p>
+  </section>
+
+  <div class="lang-toggle">
+    <a href="#fr" style="color: var(--accent); text-decoration: none; margin-right: 16px;">Français</a>
+    <a href="#en" style="color: var(--accent); text-decoration: none;">English</a>
+  </div>
+</main>
+</body>
+</html>

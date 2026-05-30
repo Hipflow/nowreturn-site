@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Return</title>
+<style>
+  :root {
+    --bg: #0a0a0a; --text: #f5f5f5; --muted: #a0a8c0; --accent: #818cf8;
+    --border: rgba(160, 168, 192, 0.15);
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg: #fafafa; --text: #1a1f3a; --muted: #3d4663; --accent: #6366f1; --border: rgba(61, 70, 99, 0.12); }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    background: var(--bg); color: var(--text);
+    font-family: ui-serif, "Iowan Old Style", Georgia, serif;
+    font-size: 17px; line-height: 1.65;
+  }
+  main { max-width: 620px; margin: 0 auto; padding: 60px 28px 80px; }
+  .crumb { font-family: ui-monospace, monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin-bottom: 40px; }
+  .crumb a { color: var(--muted); text-decoration: none; }
+  h1 { font-size: 32px; font-weight: 400; margin-bottom: 32px; letter-spacing: -0.4px; }
+  h2 { font-size: 20px; font-weight: 400; font-style: italic; margin: 40px 0 12px; }
+  p { color: var(--muted); margin-bottom: 16px; }
+  p strong { color: var(--text); }
+  a { color: var(--accent); }
+  .contact-box {
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin: 40px 0;
+  }
+  .contact-box a {
+    display: inline-block;
+    font-family: ui-monospace, monospace;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 12px;
+    padding: 12px 24px;
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    transition: all 0.2s;
+  }
+  .contact-box a:hover { background: var(--accent); color: var(--bg); }
+</style>
+</head>
+<body>
+<main>
+  <div class="crumb"><a href="/">← Return</a></div>
+  <h1>Support</h1>
+
+  <p>Tu as une question, un bug à signaler, une suggestion ?</p>
+
+  <div class="contact-box">
+    <p>Écris-moi directement.</p>
+    <a href="mailto:hello@nowreturn.app">hello@nowreturn.app</a>
+  </div>
+
+  <h2>Questions fréquentes</h2>
+
+  <p><strong>Mes données sont-elles synchronisées ?</strong><br>
+  Uniquement si tu crées un compte. Sinon tout reste sur ton appareil.</p>
+
+  <p><strong>Pourquoi certaines sessions affichent "BIENTÔT" ?</strong><br>
+  Les méditations de 10 et 20 minutes ainsi que les Paths arrivent en premium dans une prochaine version. Les 5 minutes restent gratuites pour toujours.</p>
+
+  <p><strong>Comment activer le rappel quotidien ?</strong><br>
+  Profil → Notifications → choisis l'heure. La notification est planifiée localement sur ton iPhone.</p>
+
+  <p><strong>Y aura-t-il une version Android ?</strong><br>
+  Oui, prévue pour v1.2.</p>
+
+  <p><strong>Comment supprimer mes données ?</strong><br>
+  Profil → "Réinitialiser". Tout est effacé localement et sur nos serveurs.</p>
+</main>
+</body>
+</html>
