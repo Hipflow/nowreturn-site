@@ -1,0 +1,8 @@
+# Editor / tool configs (local only)
+.claude/
+.vscode/
+.DS_Store
+
+# Node
+node_modules/
+*.log
